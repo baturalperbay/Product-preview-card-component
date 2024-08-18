@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item-preview {
+    background-color: white;
+    aspect-ratio: 4/3;
+    height: 400px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.image-item {
+    width: 50%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.info-item {
+    width: 50%;
+    flex-direction: column;
+}
+
+.info-item > * {
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.info-item .type-item {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.info-item h1 {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: hsl(212, 21%, 14%);
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.info-item .description-item {
+    font-weight: 500;
+    font-size: calc(0.6875 * 1.1rem);
+    line-height: 1.25rem;
+    color: hsl(228, 12%, 48%);
+    margin-top: 25px;
+    margin-right: calc(46% / 3);
+}
+
+.price {
+    display: flex;
+    margin-top: -20px;
+}
+
+.price-discount {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.price-original {
+    font-size: 0.7rem;
+    text-decoration: line-through;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin: auto auto auto 15px;
+}
+
+
+.button-add-to-card {
+    display: flex;
+    width: 80%;
+    height: 40px;
+    background-color: hsl(158, 36%, 37%);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+.button-add-to-card img {
+    width: 15px;
+    height: 16px;
+    margin: auto 5px auto auto;
+}
+
+.button-add-to-card p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    margin: auto auto auto 5px;
+}
+
+.button-add-to-card:hover {
+    background-color: hsl(161, 49%, 19%);
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+    html, body {
+        height: auto;
+    }
+
+    .item-preview {
+        margin-top: 25px;
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+
+    .image-item, .info-item {
+        width: auto;
+    }
+
+    .image-item {
+        content: url("images/image-product-mobile.jpg");
+        border-radius: 5px 5px 0 0;
+    }
+
+    .button-add-to-card {
+        margin-bottom: 15px;
+    }
+
+}
